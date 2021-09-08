@@ -18,6 +18,19 @@
 			width: 25%;
 		}
 		
+		.button {
+			<!-- found at https://stackoverflow.com/questions/710089/how-do-i-make-an-html-link-look-like-a-button -->
+			font: bold 11px Arial;
+			text-decoration: none;
+			background-color: #EEEEEE;
+			color: #333333;
+			padding: 2px 6px 2px 6px;
+			border-top: 1px solid #CCCCCC;
+			border-right: 1px solid #333333;
+			border-bottom: 1px solid #333333;
+			border-left: 1px solid #CCCCCC;
+		}
+		
 	</style>
 </head>
 <body>
@@ -25,16 +38,18 @@
 		<h1><!-- Paul Townshend, CISC474
 			Personal Webpage 1, paultown@udel.edu -->
 			<a href="aboutMe.html">Paul Townshend</a></h1>
-			<nav>
-				<button style="float:right">Next Student</button>
-				<button style="float:left">Previous Student</button>
-			</nav>
+			<div>
+				<nav>
+					<a href="https://jt1018.github.io/" style="float:left" class="button">Previous Student</a>
+					<a href="https://bluehenraj.github.io/" style="float:right"class="button">Next Student</a>
+				</nav>
+			</div>
 			<h2><u>Web Development Interests</u></h2>
 			<div class="page" style="width:25%; text-align:justify; margin:0 auto;">
 				<ul>
 					<li>Graphics</li>
 					<li>UI Design</li>
-					<li>Human Interaction</li>
+					<li>Human-Computer Interaction</li>
 				</ul>
 			</div>
 		<h1>
