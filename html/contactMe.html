@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/index.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_q2lEKcgUNZ20DPa23SBxO');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById("contact-form").addEventListener("submit", function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                var contact_number = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                sendContact(contact_number);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="header">
+        <h1><!-- Paul Townshend, CISC474
+            Personal Webpage 1, paultown@udel.edu -->
+            Paul Townshend</h1>
+            <nav>
+                <a href="index.html" class="button">Home</a>
+                <a href="aboutMe.html" class="button">About Me</a>
+                <a href="contactMe.html" class="button">Contact Me</a>
+                <a href="https://mattm401.github.io/" class="button"> Course Website</a>
+                <a href="https://jt1018.github.io/" class="button">Previous Student</a>
+                <a href="https://bluehenraj.github.io/" class="button">Next Student</a>				
+            </nav>
+    </div>
+    <div id="page">
+        <div id="content">	
+            <div id="contact-form-div">
+				<h1 style="text-align: center;"><u>Contact Me</u></h1>
+                <form id="contact-form">
+                    <input type="text" placeholder="Enter your First name" id="user_fname" class="field"/>
+                    <p id="fname_error" class="error">Please enter your first name</p>
+                    <input type="text" placeholder="Enter your Last Name" id="user_lname" class="field"/>
+                    <p id="lname_error" class="error">Please enter your last name</p>
+                    <input type="email" placeholder="xyz@domain" id="user_email" class="field"/>
+                    <p id="email_error" class="error">Please enter a valid email address</p>
+                    <input type="text" placeholder="xxx-xxx-xxxx" id="user_phone" class="field"/>
+                    <p id="phone_error" class="error">Please enter a valid phone number in the specified format</p>
+                    <textarea rows="4" placeholder="Enter your message" id="message" class="field" ></textarea>
+                    <p id="message_error" class="error">Please enter a message</p>
+                    <br>      
+					<input type="submit" value="Send"></input>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
