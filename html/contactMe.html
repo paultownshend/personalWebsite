@@ -7,22 +7,32 @@
     <title>Contact Form</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script src="../js/index.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script type="text/javascript">
+	<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
         (function() {
             // https://dashboard.emailjs.com/admin/integration
-            emailjs.init('user_q2lEKcgUNZ20DPa23SBxO');
+            emailjs.init("user_q2lEKcgUNZ20DPa23SBxO");
         })();
     </script>
-    <script type="text/javascript">
+    <script>
         window.onload = function() {
             document.getElementById("contact-form").addEventListener("submit", function(event) {
                 event.preventDefault();
                 // generate a five digit number for the contact_number variable
                 var contact_number = Math.random() * 100000 | 0;
                 // these IDs from the previous steps
-                sendContact(contact_number);
+                var fields = getContactInfo(contact_number);
+                if (fields != null) {
+                    emailjs.send("service_uvfw7z5", "contact_form", fields)
+                        .then(function() {
+                            console.log('SUCCESS!');
+                            alert("Message Sent!");
+                        }, function(error) {
+                            console.log('FAILED...', error);
+                        });
+                }
             });
+        
         }
     </script>
 </head>
@@ -56,7 +66,7 @@
                     <textarea rows="4" placeholder="Enter your message" id="message" class="field" ></textarea>
                     <p id="message_error" class="error">Please enter a message</p>
                     <br>      
-					<input type="submit" value="Send"></input>
+					<input type="submit" value="Send"/>
                 </form>
             </div>
         </div>
