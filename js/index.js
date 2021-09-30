@@ -37,7 +37,8 @@ function getContactInfo(contactNumber) {
     var lastName = document.getElementById("user_lname").value;
     var email = document.getElementById("user_email").value;
     var phone = document.getElementById("user_phone").value;
-    var message = document.getElementById("user_message");
+    var message = document.getElementById("user_message").value;
+    console.log(message);
     var send = false;
     if (!checkEmpty(firstName)) {
         setVisible("fname_error");
@@ -65,6 +66,12 @@ function getContactInfo(contactNumber) {
         send = false;
     } else {
         setHidden("phone_error");
+        send = true;
+    } if(!checkEmpty(message)) {
+        setVisible("message_error");
+        send = false
+    } else {
+        setHidden("message_error");
         send = true;
     }
 
