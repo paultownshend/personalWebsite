@@ -5,39 +5,101 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 		<title>Personal Website 1</title>
-	
-		<link rel="stylesheet" href="../personalWebsite/css/styles.css">
+		
+		<link rel="stylesheet" href="css/master.css">
+		<link rel="stylesheet" href="css/splash.css">
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0B9ZKL8YX"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
+
+  			gtag('config', 'G-Z0B9ZKL8YX');
+		</script> 
 		
 	</head>
 	<body>
-		<div id="header">
-			<h1><!-- Paul Townshend, CISC474
-				Personal Webpage 1, paultown@udel.edu -->
-				Paul Townshend</h1>
-				<nav>
-					<a href="../personalWebsite/index.html" class="button">Home</a>
-					<a href="../personalWebsite/html/aboutMe.html" class="button">About Me</a>
-					<a href="../personalWebsite/html/contactMe.html" class="button">Contact Me</a>
-					<a href="https://mattm401.github.io/" class="button"> Course Website</a>
-					<a href="https://jt1018.github.io/" class="button">Previous Student</a>
-					<a href="https://bluehenraj.github.io/" class="button">Next Student</a>				
-				</nav>
+		<div class="header">
+			<div id="splash-nav">
+				<!--<h1> Paul Townshend, CISC474
+					Personal Webpage 1, paultown@udel.edu 
+					Paul Townshend
+				</h1> -->
+					<ul class="nav">
+						<a href="index.html" class="nav-link">>Home</a>
+						<a href="html/aboutMe.html" class="nav-link">>Art</a>
+						<a href="html/contactMe.html" class="nav-link">>Contact Me</a>
+						<div class="dropdown">
+							<a class="nav-link">>Class Links</a>
+							<div class="dropdown-links">
+								<a href="https://mattm401.github.io/">Course Website</a>
+								<a href="https://jt1018.github.io/">Previous Student</a>
+								<a href="https://bluehenraj.github.io/">Next Student</a>
+							</div>
+						</div>
+					</ul>
+				</div>
 		</div>
-		<div id="page">
-			<div style="display: inline-block; padding:1rem">
-				<img src="images/imgOfMe.JPG" alt="Picture of Paul Townshend" class="imgOfMe">
+		<div id="page" class="row">
+			<div class="column left">
+				<br>
+				<br>
+				<h1>Recent Projects</h1>
+				<table style="padding:5px">
+					<tr>
+						<td>
+							<a href="https://distrokid.com/hyperfollow/bariblanco/something-for-the-summer"
+								target="_blank" rel="noreferrer noopener">
+								<img src="./images/sfts.PNG" alt="Something for the Summer by BariBlanco" class="summer">
+							</a>
+						</td>
+						<td>
+							<p class="desc">Something For The Summer: Album by BariBlanco, executively produced, mixed and mastered by me</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="https://distrokid.com/hyperfollow/nanadeemandptown/gottasay"
+								target="_blank" rel="noreferrer noopener">
+								<img src="./images/gottasay.png" alt="gottasay by nanadeem and ptown" class="summer">
+							</a>
+						</td>
+						<td>
+							<p class="desc">gottasay: Debut single by nanadeem, produced, mixed and mastered by me</p>
+						</td>
+					</tr>
+				</table>
 			</div>
-			<div id="parent">
-					<div id="list">
-						<h2><u>Web Development Interests</u></h2>
-							<ul>		
-								<li>Graphics</li>
-								<li>UI Design</li>
-								<li>Human-Computer Interaction</li>
-							</ul>
-					</div>
+			<div class="column middle">
+				<div>
+					<h1>Paul Townshend</h1>
+				</div>
+				<div>
+					<img src="images/imgOfMe.JPG" alt="Picture of Paul Townshend" id="splash-img">
+				</div>
 			</div>
-			
+			<div class="column right">
+				<br>
+				<br>
+				<h1>Goals and Aspirations</h1>
+				<ul class="desc">
+					<li>Gradute May 2022</li>
+					<li>Obtain an internship</li>
+					<li>Work as a web developer</li>
+					<li>One day be able to make music for a living</li>
+				</ul>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="footer">
+			<div class="icons">
+				<a href="https://twitter.com/ptown__" target="_blank" rel="noreferrer noopener"><img src="./images/twitter_icon.png"></a>
+				<a href="https://twitter.com/ptown__" target="_blank" rel="noreferrer noopener"><img src="./images/Instagram_icon.png"></a>
+			</div>
+			<p>Copyright 2021 © Paul Townshend</p>
 		</div>
 		<br>
 		<br>

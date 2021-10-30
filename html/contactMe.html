@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/splash.css">
     <script src="../js/index.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
@@ -37,21 +38,30 @@
     </script>
 </head>
 <body>
-    <div id="header">
-        <h1><!-- Paul Townshend, CISC474
-            Personal Webpage 1, paultown@udel.edu -->
-            Paul Townshend</h1>
-            <nav>
-                <a href="index.html" class="button">Home</a>
-                <a href="aboutMe.html" class="button">About Me</a>
-                <a href="contactMe.html" class="button">Contact Me</a>
-                <a href="https://mattm401.github.io/" class="button"> Course Website</a>
-                <a href="https://jt1018.github.io/" class="button">Previous Student</a>
-                <a href="https://bluehenraj.github.io/" class="button">Next Student</a>				
-            </nav>
+    <div class="header">
+        <div id="splash-nav">
+            <!--<h1> Paul Townshend, CISC474
+                Personal Webpage 1, paultown@udel.edu 
+                Paul Townshend
+            </h1> -->
+                <ul class="nav">
+                    <a href="../index.html" class="nav-link">>Home</a>
+                    <a href="aboutMe.html" class="nav-link">>Art</a>
+                    <a href="./contactMe.html" class="nav-link">>Contact Me</a>
+                    <div class="dropdown">
+                        <a class="nav-link">>Class Links</a>
+                        <div class="dropdown-links">
+                            <a href="https://mattm401.github.io/">Course Website</a>
+                            <a href="https://jt1018.github.io/">Previous Student</a>
+                            <a href="https://bluehenraj.github.io/">Next Student</a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
     </div>
-    <div id="page">
-        <div id="content">	
+    <div id="page" class="row">
+        <div class="left column"></div>
+        <div id="content" class="middle column">	
             <div id="contact-form-div">
 				<h1 style="text-align: center;"><u>Contact Me</u></h1>
                 <form id="contact-form">
@@ -69,6 +79,7 @@
                 </form>
             </div>
         </div>
+        <div class="left column"></div>
     </div>
 </body>
 </html>
